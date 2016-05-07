@@ -10,6 +10,13 @@ import UIKit
 import RealmSwift
 
 
+class User: Object {
+    
+    dynamic var name = ""
+}
+
+
+
 func async(delay: Double, _ block: () -> Void) {
     let when = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
     
@@ -63,7 +70,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if !dataSource.isEmpty {
+        if dataSource.isEmpty {
             fetch()
         }
     }

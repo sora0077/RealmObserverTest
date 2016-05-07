@@ -7,30 +7,14 @@
 //
 
 import UIKit
-import RealmSwift
-
-
-class User: Object {
-    
-    dynamic var name = ""
-}
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private var realm: Realm!
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        var config = Realm.Configuration.defaultConfiguration
-//        config.inMemoryIdentifier = "test"
-//        Realm.Configuration.defaultConfiguration = config
-        
-        realm = try! Realm()
         
         return true
     }
